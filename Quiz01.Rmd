@@ -1,5 +1,6 @@
 ---
 title: "Quiz 01"
+Author: Audrey Tjahjadi
 output: html_document
 ---
 
@@ -7,4 +8,6 @@ output: html_document
 f<-"C:/Users/Audrey/Desktop/zombies.csv"
 d <- read.csv(f, header = TRUE, sep = ",", stringsAsFactors = FALSE)
 head(d)
+
+#my computer froze as it tried to upload the file and I had to close and reopen RStudio
 ```
