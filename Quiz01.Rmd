@@ -1,0 +1,10 @@
+---
+title: "Quiz 01"
+output: html_document
+---
+
+```{r}
+library(curl)
+f<-"C:/Users/Audrey/Desktop/zombies.csv"
+d <- read.csv(f, header = TRUE, sep = ",", stringsAsFactors = FALSE)
+```
