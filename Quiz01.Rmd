@@ -11,3 +11,25 @@ head(d)
 
 #my computer froze as it tried to upload the file and I had to close and reopen RStudio
 ```
+
+QUIZ 2
+```{r}
+s<-d[c(1,2,3,4,5,6,7)]
+s
+```
+
+```{r}
+s2<- d[which(s$gender=="female"), ]
+s2
+```
+
+```{r}
+attach(s2)
+under5<- d[which(s$height < 65), ]
+under5
+
+```
+```{r}
+over5<- d[which(s$height > 65), ]
+over5
+```
