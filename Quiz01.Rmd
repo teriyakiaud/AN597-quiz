@@ -12,7 +12,7 @@ head(d)
 #my computer froze as it tried to upload the file and I had to close and reopen RStudio
 ```
 
-QUIZ 2
+#QUIZ 2
 ```{r}
 s<-d[c(1,2,3,4,5,6,7)]
 s
@@ -27,9 +27,30 @@ s2
 attach(s2)
 under5<- d[which(s$height < 65), ]
 under5
-
 ```
+
 ```{r}
 over5<- d[which(s$height > 65), ]
 over5
+```
+#QUIZ 3
+```{r}
+#medical nursing majors relationship between age and years of education, scatter plot, with regression line with 95% confidence, color the points so males are pink and females are blue
+
+library(dplyr)
+q1<-filter(d, major == "medicine/nursing")
+q1
+```
+
+```{r}
+m <- lm(years_of_education ~ age, data = q1)
+m
+plot(data = q1, years_of_education ~ age)
+```
+```{r}
+library(ggplot2)
+g <- ggplot(data = q1, aes(x = age, y = years_of_education))
+g <- g + geom_point()
+g <- g + geom_smooth(method = "lm", formula = y ~ x)
+g
 ```
